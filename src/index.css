@@ -1,3 +1,4 @@
+
 :root {
   font-family: Inter, system-ui, -apple-system, sans-serif;
   color: #202b3c;
@@ -8,11 +9,40 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
   margin: 0;
+  overflow: hidden;
+}
+
+body {
   background: #F5F5F5;
   color: #202b3c;
   font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* App Layout */
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.app-header {
+  flex-shrink: 0;
+}
+
+.app-main {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 24px;
 }
 
 /* Header */
@@ -85,7 +115,7 @@ body {
   background: #2866ba;
 }
 
-/* Header status */
+/* Header Status */
 
 .data-status {
   font-size: 12px;
@@ -104,7 +134,16 @@ body {
 /* Dashboard */
 
 .dashboard-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   max-width: 1500px;
+  min-height: 0;
+}
+
+.dashboard-content > .d-flex,
+.dashboard-content > .row {
+  flex-shrink: 0;
 }
 
 .section-title {
@@ -159,4 +198,24 @@ body {
 .card-value {
   font-size: 16px;
   font-weight: 600;
+}
+
+/* Holdings Grid */
+
+.holdings-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  margin-top: 32px;
+}
+
+.holdings-grid {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #e6eaf0;
+  border-radius: 8px;
+  overflow: hidden;
 }

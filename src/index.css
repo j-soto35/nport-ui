@@ -145,7 +145,6 @@ body {
 
 /* Suggested CIK Dropdown */
 
-
 .suggestions-header {
   display: flex;
   align-items: center;
@@ -179,7 +178,6 @@ body {
   font-size: 11px;
   border-top: 1px solid #E2E8F0;
 }
-
 
 .popular-funds-dropdown {
   position: absolute;
@@ -547,7 +545,7 @@ body {
   background: #3478d4;
 }
 
-/* Responsive */
+/* Responsive: Tablets and smaller desktops */
 
 @media (max-width: 1100px) {
   .portfolio-layout {
@@ -557,5 +555,333 @@ body {
 
   .app-main {
     padding: 18px;
+  }
+}
+
+/* Responsive: Mobile and smaller tablets */
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+    height: 100dvh;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .app-layout {
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  /* Header */
+
+  .app-header .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .app-header .row {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .header-search {
+    max-width: 100%;
+  }
+
+  .cik-search .form-control {
+    min-width: 0;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .cik-search .btn {
+    padding: 0 18px;
+  }
+
+  .suggestions-header {
+    padding: 10px 12px;
+  }
+
+  .suggestions-header-hint {
+    font-size: 10px;
+  }
+
+  .popular-fund-item {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .popular-fund-name {
+    font-size: 12px;
+  }
+
+  .popular-fund-cik {
+    font-size: 10px;
+  }
+
+  /* Main scrolling area */
+
+  .app-main {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 12px 24px;
+  }
+
+  /* Dashboard */
+
+  .dashboard-content {
+    height: auto;
+    min-height: 0;
+  }
+
+  .dashboard-content > .d-flex {
+    flex-wrap: wrap;
+    align-items: flex-start !important;
+    gap: 8px;
+  }
+
+  .dashboard-content > .row {
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+
+  .section-subtitle {
+    font-size: 12px;
+  }
+
+  .empty-state {
+    padding: 60px 12px;
+  }
+
+  .empty-state h2 {
+    font-size: 19px;
+  }
+
+  .empty-state p {
+    font-size: 13px;
+  }
+
+  /* Fund heading */
+
+  .dashboard-content > .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
+
+  .cik-badge {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  /* Summary cards */
+
+  .dashboard-content > .row.g-3 {
+    margin-bottom: 20px !important;
+  }
+
+  .dashboard-card {
+    height: 110px;
+    padding: 14px;
+    gap: 8px;
+  }
+
+  .card-label {
+    font-size: 10px;
+  }
+
+  .card-value {
+    font-size: clamp(16px, 5vw, 21px);
+    letter-spacing: -0.4px;
+  }
+
+  .card-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .card-footnote {
+    font-size: 10px;
+  }
+
+  /* Portfolio: stack analytics and holdings */
+
+  .portfolio-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: none;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .portfolio-sidebar {
+    order: 1;
+    min-width: 0;
+    min-height: auto;
+    height: 480px;
+    overflow: visible;
+  }
+
+  .holdings-section {
+    order: 2;
+    min-width: 0;
+    min-height: 0;
+    height: 550px;
+  }
+
+  .holdings-heading {
+    margin-bottom: 10px;
+  }
+
+  .holdings-grid {
+    flex: 1;
+    min-height: 350px;
+    width: 100%;
+  }
+
+  /* Analytics carousel */
+
+  .portfolio-carousel {
+    height: 100%;
+    min-height: 0;
+    gap: 8px;
+  }
+
+  .portfolio-carousel-header {
+    gap: 8px;
+  }
+
+  .carousel-controls {
+    gap: 8px;
+  }
+
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .carousel-count {
+    font-size: 10px;
+  }
+
+  .portfolio-carousel-content {
+    min-height: 0;
+  }
+
+  .composition-slide {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .portfolio-chart-card {
+    padding: 10px;
+  }
+
+  .chart-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .carousel-indicators {
+    padding-top: 2px;
+  }
+
+  /* AG Grid */
+
+  .holdings-grid {
+    overflow: hidden;
+  }
+}
+
+/* Responsive: Small phones */
+
+@media (max-width: 480px) {
+  .app-main {
+    padding: 12px 10px 20px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .dashboard-card {
+    height: 100px;
+    padding: 12px;
+  }
+
+  .card-value {
+    font-size: 16px;
+  }
+
+  .portfolio-sidebar {
+    height: 440px;
+  }
+
+  .holdings-section {
+    height: 500px;
+  }
+
+  .portfolio-chart-card {
+    padding: 8px;
+  }
+
+  .carousel-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .suggestions-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .suggestions-header-hint {
+    white-space: normal;
   }
 }

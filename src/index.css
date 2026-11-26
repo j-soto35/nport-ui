@@ -42,7 +42,8 @@ body {
   flex: 1;
   min-height: 0;
   overflow: hidden;
-  padding: 24px;
+  padding: 24px 32px;
+  width: 100%;
 }
 
 /* Header */
@@ -136,8 +137,8 @@ body {
 .dashboard-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100%;
-  max-width: 1500px;
   min-height: 0;
 }
 
@@ -200,14 +201,28 @@ body {
   font-weight: 600;
 }
 
-/* Holdings Grid */
+
+/* Portfolio Layout */
+
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.4fr) minmax(320px, 1fr);
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
 
 .holdings-section {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  min-width: 0;
   min-height: 0;
-  margin-top: 32px;
+}
+
+.holdings-heading {
+  flex-shrink: 0;
+  margin-bottom: 12px;
 }
 
 .holdings-grid {
@@ -218,4 +233,43 @@ body {
   border: 1px solid #e6eaf0;
   border-radius: 8px;
   overflow: hidden;
+}
+
+/* Portfolio Sidebar */
+
+.portfolio-sidebar {
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.portfolio-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.portfolio-chart-card {
+  height: 280px;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #e6eaf0;
+  border-radius: 8px;
+}
+
+.chart-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 1100px) {
+  .portfolio-layout {
+    grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr);
+    gap: 14px;
+  }
+
+  .app-main {
+    padding: 18px;
+  }
 }

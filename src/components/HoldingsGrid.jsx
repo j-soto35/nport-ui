@@ -23,20 +23,25 @@ const percentFormatter = new Intl.NumberFormat('en-US', {
 const gridTheme = themeQuartz.withParams({
   backgroundColor: '#FFFFFF',
   foregroundColor: '#202b3c',
-  headerBackgroundColor: '#F5F5F5',
-  borderColor: '#e6eaf0',
+
+  headerBackgroundColor: '#203B5C',
+  headerTextColor: '#F5F7FA',
+
+  borderColor: '#E2E8F0',
   accentColor: '#3478d4',
+
   fontFamily: 'Inter, system-ui, sans-serif',
   fontSize: 12,
   spacing: 8,
+
   headerFontWeight: 600,
   headerFontSize: 12,
-  rowHoverColor: '#F5F8FC',
+
+  rowHoverColor: '#F0F5FA',
 })
 
 function HoldingsGrid({ holdings = [] }) {
-  // Convert numeric API fields into numbers.
-  // This ensures that AG Grid sorts them numerically, not alphabetically.
+  // convert numeric API fields into numbers.
   const rowData = useMemo(
     () =>
       holdings.map((holding) => ({

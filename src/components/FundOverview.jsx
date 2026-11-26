@@ -51,28 +51,55 @@ function FundOverview({ filing }) {
       <div className="row g-3 mb-4">
         <div className="col-md-4">
           <div className="dashboard-card">
-            <div className="card-label">Total Assets</div>
+            <div className="card-top">
+              <span className="card-label">TOTAL ASSETS</span>
+              <span className="card-icon">
+                <i className="bi bi-building"></i>
+              </span>
+            </div>
             <div className="card-value">
               {formatCurrency(fundInfo.total_assets)}
             </div>
+            <div className="card-footnote">
+              Reported fund assets
+            </div>
+            <div className="card-accent"></div>
           </div>
         </div>
 
         <div className="col-md-4">
           <div className="dashboard-card">
-            <div className="card-label">Total Liabilities</div>
+            <div className="card-top">
+              <span className="card-label">TOTAL LIABILITIES</span>
+              <span className="card-icon muted">
+                <i className="bi bi-bank"></i>
+              </span>
+            </div>
             <div className="card-value">
               {formatCurrency(fundInfo.total_liabilities)}
             </div>
+            <div className="card-footnote">
+              Reported fund liabilities
+            </div>
+            <div className="card-accent muted"></div>
           </div>
         </div>
 
         <div className="col-md-4">
-          <div className="dashboard-card">
-            <div className="card-label">Net Assets</div>
+          <div className="dashboard-card net-assets-card">
+            <div className="card-top">
+              <span className="card-label">NET ASSETS</span>
+              <span className="card-icon">
+                <i className="bi bi-wallet2"></i>
+              </span>
+            </div>
             <div className="card-value">
               {formatCurrency(fundInfo.net_assets)}
             </div>
+            <div className="card-footnote">
+              Total assets less liabilities
+            </div>
+            <div className="card-accent"></div>
           </div>
         </div>
       </div>

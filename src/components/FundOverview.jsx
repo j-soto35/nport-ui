@@ -1,6 +1,6 @@
 
 import HoldingsGrid from './HoldingsGrid'
-import PortfolioCharts from './PortfolioCharts'
+import PortfolioAnalytics from './portfolio/PortfolioAnalytics'
 
 function formatCurrency(value) {
   const amount = Number(value)
@@ -93,7 +93,7 @@ function FundOverview({ filing }) {
         </section>
 
         <aside className="portfolio-sidebar">
-          <PortfolioCharts 
+          <PortfolioAnalytics 
             holdings={holdings}
             netAssets={fundInfo.net_assets} 
           />

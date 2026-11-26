@@ -240,7 +240,7 @@ body {
 .portfolio-sidebar {
   min-width: 0;
   min-height: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .portfolio-charts {
@@ -262,6 +262,105 @@ body {
   font-weight: 600;
   margin-bottom: 12px;
 }
+
+
+/* Portfolio Analytics Carousel */
+
+.portfolio-carousel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 10px;
+}
+
+.portfolio-carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-arrow {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e6eaf0;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: #34445a;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  background: #F5F8FC;
+}
+
+.carousel-count {
+  font-size: 11px;
+  color: #7b8797;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.portfolio-carousel-content {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+
+.composition-slide {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  height: 100%;
+  min-height: 0;
+}
+
+.portfolio-chart-card {
+  height: 100%;
+  min-height: 0;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #e6eaf0;
+  border-radius: 8px;
+}
+
+.top-holdings-card {
+  height: 100%;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.carousel-indicator {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  width: 20px;
+  border-radius: 5px;
+  background: #3478d4;
+}
+
 
 @media (max-width: 1100px) {
   .portfolio-layout {

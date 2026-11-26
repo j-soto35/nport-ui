@@ -1,5 +1,6 @@
 
 import HoldingsGrid from './HoldingsGrid'
+import PortfolioCharts from './PortfolioCharts'
 
 function formatCurrency(value) {
   const amount = Number(value)
@@ -34,7 +35,6 @@ function FundOverview({ filing }) {
 
   return (
     <div className="dashboard-content">
-
       {/* Fund heading */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <div>
@@ -44,9 +44,7 @@ function FundOverview({ filing }) {
           </p>
         </div>
 
-        <span className="cik-badge">
-          CIK: {filing.cik}
-        </span>
+        <span className="cik-badge">CIK: {filing.cik}</span>
       </div>
 
       {/* Fund financial summary */}
@@ -79,18 +77,28 @@ function FundOverview({ filing }) {
         </div>
       </div>
 
-      {/* Holdings grid */}
-      <div className="holdings-section">
-        <div className="mb-3">
-          <h2 className="section-title">Portfolio Holdings</h2>
-          <p className="section-subtitle mb-0">
-            {holdings.length.toLocaleString()} securities
-          </p>
-        </div>
+      {/* Portfolio analysis */}
+      <div className="portfolio-layout">
+        <section className="holdings-section">
+          <div className="holdings-heading">
+            <div>
+              <h2 className="section-title">Portfolio Holdings</h2>
+              <p className="section-subtitle mb-0">
+                {holdings.length.toLocaleString()} securities
+              </p>
+            </div>
+          </div>
 
-        <HoldingsGrid holdings={holdings} />
+          <HoldingsGrid holdings={holdings} />
+        </section>
+
+        <aside className="portfolio-sidebar">
+          <PortfolioCharts 
+            holdings={holdings}
+            netAssets={fundInfo.net_assets} 
+          />
+        </aside>
       </div>
-
     </div>
   )
 }
